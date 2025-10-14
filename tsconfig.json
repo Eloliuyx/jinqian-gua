@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* 基础设置 */
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+
+    /* 路径别名 */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["vite/client", "node"],   // 可选，但写上更保险
+
+    /* Linting & 严格模式 */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* 其他可选项 */
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src", "vite.config.ts"]
+}
