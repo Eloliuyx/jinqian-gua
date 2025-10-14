@@ -1,74 +1,50 @@
-# React + TypeScript + Vite
+# 🧧 金钱卦 JinQian Gua
+> 易有太极，是生两仪；两仪生四象，四象生八卦。
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+_一个以现代前端技术重现《易经》卜卦过程的互动 Web 应用。_
+_A modern web experience inspired by the ancient I-Ching coin divination._
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ 项目概览 | Overview
 
-## React Compiler
+**金钱卦 JinQian Gua** 是一个基于 React + TypeScript + Vite 构建的互动卜卦应用。
+用户可以通过“一键掷卦”的方式，自动生成六爻，呈现出完整卦象、上下卦、卦名与卦辞（中英双语）。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+这个项目希望以**数字化方式重现“易”的精神**——
+让古老的卜筮智慧成为现代人日常反思与灵感启发的工具。
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 功能特性 | Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| 功能 | Feature |
+|------|----------|
+| 🎲 一键掷卦 | One-click coin casting with animation |
+| 🌗 自动生成六爻、上卦、下卦 | Auto-calculates six lines, upper & lower trigrams |
+| 📜 显示卦名与卦辞（中英双语） | Displays hexagram name & guaci in Chinese and English |
+| 🌿 响应式界面（适配移动端） | Fully responsive UI (mobile & desktop) |
+| 🧘 动态过渡与占卦动画 | Smooth coin-casting and transition animations |
+| 🪶 使用 Tailwind + shadcn/ui 构建 | Built with Tailwind v4 + shadcn/ui |
+| 🌍 未来计划：中英双语切换、多卦对比、之卦计算 | Coming soon: bilingual toggle, changing hexagram, multi-view |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ 技术栈 | Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| 模块 | 技术 |
+|------|------|
+| 框架 / Framework | React + TypeScript + Vite |
+| 样式 / Styling | Tailwind CSS v4 + shadcn/ui |
+| 状态逻辑 / Logic | 自定义 Hooks + TypeScript 工具函数 |
+| 版本控制 / Version Control | Git + GitHub |
+| 未来部署 / Deployment (Planned) | Vercel / Netlify |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# jinqian-gua
+## 🚀 快速启动 | Getting Started
+
+### 1️⃣ 克隆项目 | Clone the repository
+```bash
+git clone https://github.com/Eloliyx/jinqian-gua.git
+cd jinqian-gua

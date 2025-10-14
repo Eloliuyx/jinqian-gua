@@ -5,6 +5,14 @@ This project follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [v1.0.2] – 2025-10-14
+### 📝 Updated
+- Enhanced bilingual README.md documentation
+
+## [v1.0.1] – 2025-10-14
+### 📝 Updated
+- Updated package.json documentation
+
 ## [v1.0.0] – 2025-10-14
 **Milestone:** MVP Release
 **Description:** First public version with full divination workflow.
