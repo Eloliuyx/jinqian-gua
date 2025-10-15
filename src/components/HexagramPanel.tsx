@@ -15,12 +15,20 @@ function formatMovingLabel(moving: number[], locale: Locale) {
 }
 
 /** ===== 工具：基于 bit 渲染（0=阴，1=阳），仅显示少阴/少阳文本 ===== */
-function lineTextFromBit(bit: number): string {
+function lineTextFromBit(bit: number, locale: Locale): string {
+  if (locale === "en") return bit === 1 ? "———    Young Yang" : "—  —   Young Yin";
   return bit === 1 ? "———    少阳" : "—  —   少阴";
 }
-
-/** ===== 可选：基于原始 6/7/8/9 渲染，包含动静标识（若传入 yaos）===== */
-function lineTextFromRaw(v: number): string {
+function lineTextFromRaw(v: number, locale: Locale): string {
+  if (locale === "en") {
+    switch (v) {
+      case 6: return "× Old Yin (moving)";
+      case 7: return "—— Young Yang";
+      case 8: return "—  — Young Yin";
+      case 9: return "○ Old Yang (moving)";
+      default: return "";
+    }
+  }
   switch (v) {
     case 6: return "× 老阴（动）";
     case 7: return "—— 少阳";
@@ -102,8 +110,9 @@ export default function HexagramPanel({
               <div className="font-mono text-sm leading-7 min-w-[140px] md:min-w-[180px]">
                 {/* 优先按原始 6/7/8/9 渲染；否则按 bit 渲染 */}
                 {yaosTopDown
-                  ? yaosTopDown.map((v, i) => <div key={i}>{lineTextFromRaw(v)}</div>)
-                  : topDownBits.map((b, i) => <div key={i}>{lineTextFromBit(b)}</div>)}
+                  ? yaosTopDown.map((v, i) => <div key={i}>{lineTextFromRaw(v, locale)}</div>)
+                  : topDownBits.map((b, i) => <div key={i}>{lineTextFromBit(b, locale)}</div>)}
+
               </div>
             </div>
 

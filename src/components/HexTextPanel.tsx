@@ -2,8 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { HexDatum, Locale } from "@/lib/types";
 
 export default function HexTextPanel({
-  main, locale,
-}: { main: { hex: HexDatum }; locale: Locale }) {
+  main, locale, moving,
+}: { main: { hex: HexDatum }; locale: Locale; moving: number[] }) {
   const { hex } = main;
   return (
     <Card className="border rounded-2xl">
@@ -13,7 +13,7 @@ export default function HexTextPanel({
           <div className="text-slate-500 mb-1">{locale==="en"?"Judgment":"卦辞"}</div>
           <div>{hex.guaci}</div>
         </div>
-        <YaociList yaoci={hex.yaoci} moving={[]} locale={locale} />
+        <YaociList yaoci={hex.yaoci} moving={moving} locale={locale} />
       </CardContent>
     </Card>
   );

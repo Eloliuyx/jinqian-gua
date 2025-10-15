@@ -39,7 +39,7 @@ export default function ResultCard({
               yaos={yaos}
             />
             {/* 右：卦辞与爻辞 */}
-            <HexTextPanel main={info.base} locale={locale} />
+            <HexTextPanel main={info.base} locale={locale} moving={info.moving} />
 
             {/* 底部：提示与之卦（跨两列） */}
             <div className="md:col-span-2">
