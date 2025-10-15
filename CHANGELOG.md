@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 This project follows [Semantic Versioning](https://semver.org/).
 
 ---
+## [v2.1.0] – 2025-10-15
+### 📝 Updated
+- Updated the baihua versions of yaoci and guaci.
+
+## [v2.0.0] – 2025-10-14
+**Milestone:** V2 Release
+**Description:** First public version with full divination workflow.
 
 ## [v1.0.2] – 2025-10-14
 ### 📝 Updated

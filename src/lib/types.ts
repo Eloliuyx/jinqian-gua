@@ -16,6 +16,8 @@ export type HexDatum = {
   upper: number;    // 上卦索引 0..7
   lower: number;    // 下卦索引 0..7
   yaoci?: string[]; // 可选：六爻爻辞，自上而下 [上、五、四、三、二、初]
+  guaciPlain?: string;       // 新增：卦辞白话
+  yaociPlain?: string[];     // 新增：自上而下 6 条白话
 };
 
 /** 由 6 爻（自下而上）计算出来的上下卦信息 */
