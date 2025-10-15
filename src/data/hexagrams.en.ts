@@ -7,6 +7,8 @@ export type HexDatum = {
     guaci: string;     // Judgment text (short)
     upper: number;     // 0..7
     lower: number;     // 0..7
+      /** 可选：六条爻辞，顺序“自上而下” [上、五、四、三、二、初]；缺失时 UI 会降级为“待补”。 */
+    yaoci?: string[]; // length = 6, top-down
   };
 
   const LIST: HexDatum[] = [
